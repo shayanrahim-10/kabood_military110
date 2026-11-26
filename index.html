@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#17221c">
+  <meta name="description" content="سامانه مدیریت و ارتباطات سازمانی">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>سامانه هم‌راه | مدیریت سازمانی</title>
+</head>
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <main id="authView" class="auth-shell">
+    <section class="auth-card">
+      <div class="brand-mark">هـ</div>
+      <p class="eyebrow">سامانه مدیریت و ارتباطات سازمانی</p>
+      <h1>هم‌راه</h1>
+      <p class="muted">ورود امن به فضای کاری شما</p>
+      <div class="field">
+        <label for="loginEmail">نام کاربری / ایمیل</label>
+        <input id="loginEmail" autocomplete="username" placeholder="نام کاربری سازمانی">
+      </div>
+      <div class="field">
+        <label for="loginPassword">گذرواژه</label>
+        <input id="loginPassword" type="password" autocomplete="current-password" placeholder="گذرواژه">
+      </div>
+      <button id="loginBtn" class="btn primary full">ورود به سامانه</button>
+      <div class="auth-note">
+        <span class="dot"></span>
+        <span>ورود واقعی پس از اتصال سرویس احراز هویت فعال می‌شود.</span>
+      </div>
+      <button id="demoBtn" class="btn ghost full">مشاهده نسخه نمایشی</button>
+    </section>
+  </main>
+
+  <div id="appView" class="app hidden">
+    <aside class="sidebar" id="sidebar">
+      <div class="side-brand"><div class="brand-mark small">هـ</div><div><b>هم‌راه</b><small>پرتال سازمانی</small></div></div>
+      <div class="user-chip"><div class="avatar" id="sideAvatar">م</div><div><b id="sideName">کاربر</b><small id="sideRole">کاربر سامانه</small></div></div>
+      <nav id="nav">
+        <button class="nav-item active" data-page="dashboard"><span>▦</span> پیشخوان</button>
+        <button class="nav-item" data-page="messages"><span>✉</span> مکاتبات <i id="unreadBadge" class="count">0</i></button>
+        <button class="nav-item" data-page="compose"><span>＋</span> پیام جدید</button>
+        <button class="nav-item admin-only" data-page="people"><span>♙</span> مدیریت کاربران</button>
+        <button class="nav-item" data-page="records"><span>▤</span> سوابق و گزارش‌ها</button>
+        <button class="nav-item" data-page="profile"><span>⚙</span> حساب کاربری</button>
+      </nav>
+      <div class="side-bottom"><div class="secure-label">● محیط امن سازمانی</div><button id="logoutBtn" class="nav-item logout">↪ خروج از حساب</button></div>
+    </aside>
+
+    <section class="main-area">
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn mobile-only" aria-label="بازکردن منو">☰</button>
+        <div><span class="eyebrow" id="pageEyebrow">فضای کاری</span><h2 id="pageTitle">پیشخوان</h2></div>
+        <div class="top-actions"><button class="icon-btn" id="notifyBtn" title="اعلان‌ها">♧<i id="notifyDot"></i></button><div class="avatar" id="topAvatar">م</div></div>
+      </header>
+      <div class="content" id="pageContent"></div>
+      <footer>هم‌راه <span>•</span> سامانه مدیریت و ارتباطات سازمانی <span class="footer-mode">نسخه نمایشی</span></footer>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "هم‌راه | سامانه مدیریت سازمانی",
+  "short_name": "هم‌راه",
+  "lang": "fa",
+  "dir": "rtl",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#101713",
+  "theme_color": "#17221c",
+  "description": "سامانه مدیریت و ارتباطات سازمانی",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
